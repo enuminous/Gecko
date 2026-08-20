@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "GECKO Machine Warning Record",
+  "type": "object",
+  "required": [
+    "machine_version",
+    "timestamp",
+    "asset_id",
+    "degradation_score",
+    "alert"
+  ],
+  "properties": {
+    "machine_version": {
+      "type": "string"
+    },
+    "timestamp": {
+      "type": "string"
+    },
+    "asset_id": {
+      "type": "string"
+    },
+    "degradation_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "failure_horizon": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "alert": {
+      "type": "boolean"
+    },
+    "coherence_loss": {
+      "type": "number"
+    },
+    "kinetic_outlier": {
+      "type": "number"
+    }
+  }
+}
